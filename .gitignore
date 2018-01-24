@@ -1,5 +1,5 @@
 # ignore binaries
-/fiche
+/out
 
 # ignore default outpit dir
 code/
