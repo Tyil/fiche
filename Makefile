@@ -8,6 +8,9 @@ all: prepare
 static: prepare
 	${CC} $(CFLAGS) -static -w src/main.c src/fiche.c -o out/fiche
 
+docker: static
+	docker build -t fiche .
+
 install: fiche
 	install -m 0755 out/fiche $(prefix)
 
